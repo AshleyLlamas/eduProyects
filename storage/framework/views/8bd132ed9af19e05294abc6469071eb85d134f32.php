@@ -5,15 +5,15 @@
         <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('auth.mi-perfil')->html();
-} elseif ($_instance->childHasBeenRendered('CIyXKq4')) {
-    $componentId = $_instance->getRenderedChildComponentId('CIyXKq4');
-    $componentTag = $_instance->getRenderedChildComponentTagName('CIyXKq4');
+} elseif ($_instance->childHasBeenRendered('jTx4NuH')) {
+    $componentId = $_instance->getRenderedChildComponentId('jTx4NuH');
+    $componentTag = $_instance->getRenderedChildComponentTagName('jTx4NuH');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('CIyXKq4');
+    $_instance->preserveRenderedChild('jTx4NuH');
 } else {
     $response = \Livewire\Livewire::mount('auth.mi-perfil');
     $html = $response->html();
-    $_instance->logRenderedChild('CIyXKq4', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('jTx4NuH', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

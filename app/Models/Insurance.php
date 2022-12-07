@@ -9,14 +9,11 @@ class Insurance extends Model
 {
     use HasFactory;
 
-    protected $dates = ['created_at', 'updated', 'vigencia_de_seguro'];
+    protected $dates = ['created_at', 'updated'];
 
     protected $fillable = [
         'número_de_seguro',
         'aseguranza',
-        'vigencia_de_seguro',
-        'foto_de_la_poliza',
-        'teléfono',
         'student_id'
     ];
 

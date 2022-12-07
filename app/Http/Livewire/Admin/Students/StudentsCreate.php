@@ -188,7 +188,6 @@ class StudentsCreate extends Component
                 'día' => $day,
                 'hora_de_entrada' => $this->hora_de_entrada[$n],
                 'hora_de_salida' => $this->hora_de_salida[$n],
-                'turno' => null,
                 'student_id' => $student->id,
                 'actual' => true
             ]);

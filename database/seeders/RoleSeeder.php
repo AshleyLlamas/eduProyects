@@ -52,6 +52,9 @@ class RoleSeeder extends Seeder
         $permission = Permission::create(['name' => 'admin.users.edit',
         'description' => 'Editar usuario'])->syncRoles([$role1]);
 
+        $permission = Permission::create(['name' => 'admin.users.destroy',
+        'description' => 'Eliminar usuario'])->syncRoles([$role1]);
+
         //Carrera
         $permission = Permission::create(['name' => 'admin.careers.index',
         'description' => 'Ver todas las ucarrera'])->syncRoles([$role1]);
@@ -65,6 +68,9 @@ class RoleSeeder extends Seeder
         $permission = Permission::create(['name' => 'admin.careers.edit',
         'description' => 'Editar carrera'])->syncRoles([$role1]);
 
+        $permission = Permission::create(['name' => 'admin.careers.destroy',
+        'description' => 'Eliminar carrera'])->syncRoles([$role1]);
+
         //Campus
         $permission = Permission::create(['name' => 'admin.campuses.index',
         'description' => 'Ver todos los campus'])->syncRoles([$role1]);
@@ -77,5 +83,38 @@ class RoleSeeder extends Seeder
 
         $permission = Permission::create(['name' => 'admin.campuses.edit',
         'description' => 'Editar campus'])->syncRoles([$role1]);
+
+        $permission = Permission::create(['name' => 'admin.campus.destroy',
+        'description' => 'Eliminar campus'])->syncRoles([$role1]);
+
+        //Questionnaire
+        $permission = Permission::create(['name' => 'admin.questionnaires.index',
+        'description' => 'Ver todos los cuestionarios'])->syncRoles([$role1]);
+
+        $permission = Permission::create(['name' => 'admin.questionnaires.create',
+        'description' => 'Crear cuestionario'])->syncRoles([$role1]);
+
+        $permission = Permission::create(['name' => 'admin.questionnaires.show',
+        'description' => 'Ver cuestionario'])->syncRoles([$role1]);
+
+        $permission = Permission::create(['name' => 'admin.questionnaires.edit',
+        'description' => 'Editar cuestionario'])->syncRoles([$role1]);
+
+        $permission = Permission::create(['name' => 'admin.questionnaires.destroy',
+        'description' => 'Eliminar cuestionario'])->syncRoles([$role1]);
+
+        //Check
+        $permission = Permission::create(['name' => 'admin.checks.index',
+        'description' => 'Ver todos los checks'])->syncRoles([$role1]);
+
+        $permission = Permission::create(['name' => 'admin.checks.show',
+        'description' => 'Ver check'])->syncRoles([$role1]);
+
+        //Assistance
+        $permission = Permission::create(['name' => 'admin.assistances.index',
+        'description' => 'Ver todas las asistencias'])->syncRoles([$role1]);
+
+        $permission = Permission::create(['name' => 'admin.assistances.show',
+        'description' => 'Ver asistencia'])->syncRoles([$role1]);
     }
 }

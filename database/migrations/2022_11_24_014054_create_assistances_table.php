@@ -16,13 +16,14 @@ class CreateAssistancesTable extends Migration
         Schema::create('assistances', function (Blueprint $table) {
             $table->id();
 
-            $table->date('fecha');
-
-            $table->unsignedBigInteger('check_id')->nullable()->nullable();
+            $table->unsignedBigInteger('check_id')->nullable();
             $table->foreign('check_id')->references('id')->on('checks')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->unsignedBigInteger('student_id')->nullable()->nullable();
+            $table->unsignedBigInteger('student_id')->nullable();
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->string('asistencia')->nullable();
+            $table->longText('observación')->nullable();
 
             $table->timestamps();
         });

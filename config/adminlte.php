@@ -311,21 +311,44 @@ return [
             'route'         => 'admin.index',
             'icon'        => 'fas fa-home',
         ],
-        ['header' => 'CONTENIDO'],
+        ['header' => 'ESCOLAR'],
         [
             'text' => 'Estudiantes',
             'route' => 'admin.students.index',
             'icon' => 'fas fa-solid fa-graduation-cap',
+            'can' => 'admin.students.index'
         ],
         [
             'text' => 'Carreras',
             'route' => 'admin.careers.index',
             'icon' => 'fas fa-solid fa-briefcase',
+            'can' => 'admin.careers.index'
         ],
         [
             'text' => 'Campus',
             'route' => 'admin.campuses.index',
             'icon' => 'fas fa-solid fa-school',
+            'can' => 'admin.campuses.index'
+        ],
+        [
+            'text' => 'Checadores',
+            'route' => 'admin.checks.index',
+            'icon' => 'fas fa-solid fa-check-to-slot',
+            'can'  => 'admin.checks.index',
+        ],
+        [
+            'text' => 'Asistencia',
+            'route' => 'admin.assistances.index',
+            'icon' => 'fas fa-solid fa-calendar-check',
+            'can' => 'admin.assistances.index',
+        ],
+        ['header' => 'CONTENIDO OPCIONAL'],
+        [
+            'text' => 'Cuestionario',
+            'route' => 'admin.questionnaires.index',
+            'route' => 'admin.questionnaires.index',
+            'icon' => 'fas fa-solid fa-clipboard-question',
+            'can' => 'admin.questionnaires.index'
         ],
         ['header' => 'GESTIÓN'],
         [

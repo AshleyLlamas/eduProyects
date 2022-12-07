@@ -43,6 +43,9 @@ class CreateStudentsTable extends Migration
             $table->enum("turno", ["MATUTINO", "INTERMEDIO", "VESPERTINO", "HORARIO COMPLETO", 'NOCTURNO'])->nullable();
 
             $table->string('tipo_de_sangre')->nullable();
+
+            $table->unsignedBigInteger('questionnaire_id')->nullable();
+            $table->foreign('questionnaire_id')->references('id')->on('questionnaires')->onDelete('set null')->onUpdate('cascade');
             
             $table->string('qr')->unique()->nullable();
             $table->string('slug')->unique()->nullable();

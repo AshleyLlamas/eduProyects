@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AssistanceController;
 use App\Http\Controllers\Admin\CampusController;
 use App\Http\Controllers\Admin\CareerController;
+use App\Http\Controllers\Admin\CheckController;
 use App\Http\Controllers\admin\HomeController;
+use App\Http\Controllers\Admin\QuestionnaireController;
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +24,12 @@ Route::resource('careers', CareerController::class)->only(['index', 'create', 's
 
 //Campus
 Route::resource('campuses', CampusController::class)->only(['index', 'create', 'show', 'edit', 'destroy'])->names('admin.campuses');
+
+//Questionnaire
+Route::resource('questionnaires', QuestionnaireController::class)->only(['index', 'create', 'show', 'edit', 'destroy'])->names('admin.questionnaires');
+
+//Check
+Route::resource('checks', CheckController::class)->only(['index', 'show'])->names('admin.checks');
+
+//Assistance
+Route::resource('assistances', AssistanceController::class)->only(['index', 'show'])->names('admin.assistances');

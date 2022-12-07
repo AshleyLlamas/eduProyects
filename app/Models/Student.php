@@ -63,9 +63,24 @@ class Student extends Authenticatable
         return $this->hasMany('App\Models\Insurance');
     }
 
+    //Uno a Muchos
+    public function tutors(){
+        return $this->hasMany('App\Models\Tutor');
+    }
+
     //Uno a uno polimorfico
     public function image(){
         return $this->morphOne('App\Models\Image', 'imageable');
+    }
+
+    //Uno a Muchos
+    public function schedules(){
+        return $this->hasMany('App\Models\Schedule');
+    }
+
+    //Uno a Muchos
+    public function checks(){
+        return $this->hasMany('App\Models\Check');
     }
 
     public function getRouteKeyName(){

@@ -16,7 +16,7 @@ class CreateTimeChecksTable extends Migration
         Schema::create('time_checks', function (Blueprint $table) {
             $table->id();
 
-            $table->time('hora')->nullable();
+            $table->dateTime('hora')->nullable();
             $table->string('estatus')->nullable();
             $table->longText('observación')->nullable();
 

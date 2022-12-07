@@ -102,7 +102,7 @@
         <script>
             Swal.fire(
             '¡Eliminado!',
-            'El usuario se elimino con éxito.',
+            'La carrera se elimino con éxito.',
             'success'
             )
         </script>
@@ -113,7 +113,7 @@
         e.preventDefault();
         Swal.fire({
         title: '¿Estas seguro?',
-        text: "El usuario se eliminara definitivamente",
+        text: "La carrera se eliminara definitivamente",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
