@@ -18,10 +18,6 @@ class QuestionnairesCreate extends Component
         ),
     );
 
-    public function mount(){
-        
-    }
-
     protected function rules(){
         $array = [];
 

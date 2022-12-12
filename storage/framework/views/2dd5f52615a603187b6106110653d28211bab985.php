@@ -55,10 +55,10 @@
                             <div class="col">
                                 <div class="text-start text-secondary">
                                     <?php if(isset($check->in)): ?>
-                                        <p class="mb-1"><i class="fa-solid fa-clock"></i> <b>Entrada:</b> <?php echo e($check->in->hora); ?></p>
+                                        <p class="mb-1 h5"><span class="badge rounded-pill bg-secondary text-white shadow-sm py-2"><i class="fa-solid fa-clock" style="color: gainsboro"></i> <b>Entrada:</b> <?php echo e($check->in->hora); ?></span></p>
                                     <?php endif; ?>
                                     <?php if(isset($check->out)): ?>
-                                        <p class="mb-1"><i class="fa-solid fa-clock"></i> <b>Salida:</b> <?php echo e($check->out->hora); ?></p>
+                                        <p class="mb-1 h5"><span class="badge rounded-pill bg-secondary text-white shadow-sm py-2"><i class="fa-solid fa-clock" style="color: gainsboro"></i> <b>Salida:</b> <?php echo e($check->out->hora); ?></span></p>
                                     <?php endif; ?>
                                 </div>
                             </div>

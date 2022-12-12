@@ -15,7 +15,21 @@ class AssistanceController extends Controller
     }
 
     public function index(){
-        return view('admin.assistances.index');
+        /*
+        $assistances = Assistance::whereHas('check', function($query) {
+            $query->where('fecha', '=', $this->date);
+        })->paginate();
+
+        $asistencias = $assistances->where('asistencia', '=', 'Asistió')->count();
+        $retardos = $assistances->where('asistencia', '=' ,'Con retardo')->count();
+        $faltantes = $assistances->where('asistencia', '=', 'No asistió')->count();
+        */
+        return view('admin.assistances.index'/*, [
+            'assistances' => $assistances,
+            'asistencias' => $asistencias,
+            'retardos' => $retardos,
+            'faltantes' => $faltantes
+        ]*/);
     }
 
     public function show(Assistance $assistance)

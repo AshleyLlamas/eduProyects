@@ -24,26 +24,26 @@ class MiPerfil extends Component
 
     public function cheking(){
 
-        switch(substr(Carbon::now()->formatLocalized('%A'), 0, 2)){
-            case "lu":
+        switch(Carbon::now()->formatLocalized('%A')){
+            case "Monday":
                 $clave = "Lunes";
             break;
-            case "ma":
+            case "Tuesday":
                 $clave = "Martes";
             break;
-            case "mi":
+            case "Wednesday":
                 $clave = "Miercoles";
             break;
-            case "ju":
+            case "Thursday":
                 $clave = "Jueves";
             break;
-            case "vi":
+            case "Friday":
                 $clave = "Viernes";
             break;
-            case "sa":
-                $clave = "Sabado";
+            case "Saturday":
+                $clave = "Sábado";
             break;
-            case "do":
+            case "Sunday":
                 $clave = "Domingo";
             break;
         }
